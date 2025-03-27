@@ -7,19 +7,16 @@
     :field="$field"
     :prefix-icon="false"
     :suffix-icon="false"
+    :password="false"
 >
-    <x-ts-password
+    <x-dynamic-component :component="TallStackUi::prefix('password')"
         :invalidate="true"
         :placeholder="$getPlaceholder()"
-        :clearable="$getClearable()"
-        :icon="$getIcon()"
-        :position="$getIconPosition()"
-        :prefix="$getPrefix()"
-        :suffix="$getSuffix()"
+        :rules="$getPasswordRules()"
+        :generator="$getGenerator()"
         :attributes="
                 $attributes
                     ->merge([
-                        'type' => $getType(),
                         'autofocus' => $isAutofocused(),
                         'disabled' => $isDisabled(),
                         'id' => $getId(),

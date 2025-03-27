@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace TallStackUIFilament\TallStackUIFilament\Enums;
+namespace TallStackUIFilament\Enums;
 
 enum LabelAlignments: string
 {

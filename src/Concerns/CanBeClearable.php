@@ -1,6 +1,6 @@
 <?php
 
-namespace TallStackUIFilament\TallStackUIFilament\Concerns;
+namespace TallStackUIFilament\Concerns;
 
 use Closure;
 

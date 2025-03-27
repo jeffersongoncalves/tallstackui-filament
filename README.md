@@ -52,7 +52,7 @@ php artisan vendor:publish --tag="tallstackuifilament-views"
 ## Usage
 
 ```php
-$tallStackUIFilament = new TallStackUIFilament\TallStackUIFilament();
+$tallStackUIFilament = new TallStackUIFilament();
 echo $tallStackUIFilament->echoPhrase('Hello, TallStackUIFilament!');
 ```
 

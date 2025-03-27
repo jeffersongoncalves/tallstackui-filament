@@ -1,10 +1,10 @@
 <?php
 
-namespace TallStackUIFilament\TallStackUIFilament\Tests;
+namespace TallStackUIFilament\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use TallStackUIFilament\TallStackUIFilament\TallStackUIFilamentServiceProvider;
+use TallStackUIFilament\TallStackUIFilamentServiceProvider;
 
 class TestCase extends Orchestra
 {

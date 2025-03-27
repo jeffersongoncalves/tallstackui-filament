@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace TallStackUIFilament\TallStackUIFilament\Forms\Components;
+namespace TallStackUIFilament\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Concerns\HasExtraInputAttributes;
 use Filament\Forms\Components\Field;
-use TallStackUIFilament\TallStackUIFilament\Concerns\CanBeSelectable;
-use TallStackUIFilament\TallStackUIFilament\Concerns\HasPlaceholder;
+use TallStackUIFilament\Concerns\CanBeSelectable;
+use TallStackUIFilament\Concerns\HasPlaceholder;
 
 class Number extends Field
 {

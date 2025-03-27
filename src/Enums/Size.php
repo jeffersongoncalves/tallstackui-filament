@@ -1,6 +1,6 @@
 <?php
 
-namespace TallStackUIFilament\TallStackUIFilament\Enums;
+namespace TallStackUIFilament\Enums;
 
 enum Size: string
 {

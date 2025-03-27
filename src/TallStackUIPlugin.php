@@ -1,6 +1,6 @@
 <?php
 
-namespace TallStackUIFilament\TallStackUIFilament;
+namespace TallStackUIFilament;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;

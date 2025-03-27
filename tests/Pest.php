@@ -1,5 +1,5 @@
 <?php
 
-use TallStackUIFilament\TallStackUIFilament\Tests\TestCase;
+use TallStackUIFilament\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -25,8 +25,9 @@ class TallStackUIPlugin implements Plugin
     {
         FilamentView::registerRenderHook(
             PanelsRenderHook::HEAD_START,
-            fn(): string => Blade::render('<x-tallstackuifilament::scripts'),
+            fn(): string => Blade::render('<x-tallstackuifilament::scripts />'),
         );
+
     }
 
     public static function make(): static

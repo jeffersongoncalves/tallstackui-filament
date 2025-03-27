@@ -1,2 +1,1 @@
 <tallstackui:script />
-@livewireStyles

@@ -8,6 +8,7 @@ use Filament\Forms\Components\Concerns\HasExtraInputAttributes;
 use Filament\Forms\Components\Field;
 use TallStackUIFilament\TallStackUIFilament\Enums\LabelAlignments;
 use TallStackUIFilament\TallStackUIFilament\Enums\LabelPosition;
+use TallStackUIFilament\TallStackUIFilament\Enums\Size;
 
 class Checkbox extends Field
 {
@@ -38,8 +39,16 @@ class Checkbox extends Field
         $this->rule('boolean');
     }
 
-    public function size(string $size): self
+    public function size(Size | string $size): self
     {
+        if ($size instanceof Size) {
+            $size = $size->value;
+        }
+
+        if (! in_array($size, Size::availableValues())) {
+            throw new \InvalidArgumentException('Invalid size provided.');
+        }
+
         $this->size = $size;
 
         return $this;

@@ -11,6 +11,7 @@
         :selectable="$getSelectable()"
         :colors="$getColors()"
         :clearable="$getClearable()"
+        :invalidate="true"
         :attributes="
                 $attributes
                     ->merge([

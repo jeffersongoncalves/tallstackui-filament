@@ -18,6 +18,7 @@
         :multiple="$getMultiple()"
         :month-year-only="$getMonthYearOnly()"
         :invalidate="true"
+        :placeholder="$getPlaceholder()"
         :attributes="
                 $attributes
                     ->merge([

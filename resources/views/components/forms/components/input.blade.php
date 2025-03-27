@@ -5,12 +5,10 @@
 <x-dynamic-component
     :component="$getFieldWrapperView()"
     :field="$field"
+    :prefix-icon="false"
+    :suffix-icon="false"
 >
-    <x-ts-color
-        :picker="$getPicker()"
-        :selectable="$getSelectable()"
-        :colors="$getColors()"
-        :clearable="$getClearable()"
+    <x-ts-input
         :invalidate="true"
         :placeholder="$getPlaceholder()"
         :attributes="

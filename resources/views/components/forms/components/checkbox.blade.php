@@ -10,7 +10,7 @@
     :field="$field"
     :label="$getInline() ? false : $getLabel()"
 >
-    <x-ts-checkbox
+    <x-dynamic-component :component="TallStackUi::prefix('checkbox')"
         :color="$getColor()"
         :position="$getLabelPosition()"
         :invalidate="false"
@@ -41,5 +41,5 @@
                 {{ $getLabel() }}
             </x-slot:label>
         @endif
-    </x-ts-checkbox>
+    </x-dynamic-component>
 </x-dynamic-component>

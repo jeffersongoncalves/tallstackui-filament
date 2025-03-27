@@ -8,7 +8,7 @@
     :prefix-icon="false"
     :suffix-icon="false"
 >
-    <x-ts-input
+    <x-dynamic-component :component="TallStackUi::prefix('input')"
         :invalidate="true"
         :placeholder="$getPlaceholder()"
         :clearable="$getClearable()"

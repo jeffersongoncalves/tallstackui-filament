@@ -8,18 +8,18 @@
     :prefix-icon="false"
     :suffix-icon="false"
 >
-    <x-dynamic-component :component="TallStackUi::prefix('number')"
+    <x-ts-password
         :invalidate="true"
         :placeholder="$getPlaceholder()"
-        :step="$getStep()"
-        :min="$getMinValue()"
-        :max="$getMaxValue()"
-        :centralized="$getCentralized()"
-        :selectable="$getSelectable()"
-        :chevron="$getChevron()"
+        :clearable="$getClearable()"
+        :icon="$getIcon()"
+        :position="$getIconPosition()"
+        :prefix="$getPrefix()"
+        :suffix="$getSuffix()"
         :attributes="
                 $attributes
                     ->merge([
+                        'type' => $getType(),
                         'autofocus' => $isAutofocused(),
                         'disabled' => $isDisabled(),
                         'id' => $getId(),

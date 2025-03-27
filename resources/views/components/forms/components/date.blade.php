@@ -6,7 +6,7 @@
     :component="$getFieldWrapperView()"
     :field="$field"
 >
-    <x-ts-date
+    <x-dynamic-component :component="TallStackUi::prefix('date')"
         :format="$getFormat()"
         :helpers="$getHelpers()"
         :min-date="$getMinDate()"

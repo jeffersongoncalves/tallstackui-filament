@@ -6,7 +6,7 @@
     :component="$getFieldWrapperView()"
     :field="$field"
 >
-    <x-ts-color
+    <x-dynamic-component :component="TallStackUi::prefix('color')"
         :picker="$getPicker()"
         :selectable="$getSelectable()"
         :colors="$getColors()"

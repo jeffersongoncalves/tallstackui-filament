@@ -11,9 +11,15 @@
     <x-ts-input
         :invalidate="true"
         :placeholder="$getPlaceholder()"
+        :clearable="$getClearable()"
+        :icon="$getIcon()"
+        :position="$getIconPosition()"
+        :prefix="$getPrefix()"
+        :suffix="$getSuffix()"
         :attributes="
                 $attributes
                     ->merge([
+                        'type' => $getType(),
                         'autofocus' => $isAutofocused(),
                         'disabled' => $isDisabled(),
                         'id' => $getId(),

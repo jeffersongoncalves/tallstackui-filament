@@ -1,9 +1,13 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace TallStackUIFilament\TallStackUIFilament\Forms\Components;
 
 use Filament\Forms\Components\Concerns\HasExtraInputAttributes;
 use Filament\Forms\Components\Field;
+use TallStackUIFilament\TallStackUIFilament\Enums\LabelAlignments;
+use TallStackUIFilament\TallStackUIFilament\Enums\LabelPosition;
 
 class Checkbox extends Field
 {
@@ -17,7 +21,9 @@ class Checkbox extends Field
 
     protected string $labelPosition = 'right';
 
-    protected string $labelAlignment = 'left';
+    protected string $labelAlignment = 'middle';
+
+    protected bool $inline = true;
 
     protected function setUp(): void
     {
@@ -46,15 +52,38 @@ class Checkbox extends Field
         return $this;
     }
 
-    public function labelPosition(string $position): self
+    public function labelPosition(string | LabelPosition $position): self
     {
+        if ($position instanceof LabelPosition) {
+            $position = $position->value;
+        }
+
+        if (! in_array($position, LabelPosition::availableValues())) {
+            throw new \InvalidArgumentException('Invalid label position provided.');
+        }
+
         $this->labelPosition = $position;
 
         return $this;
     }
 
-    public function labelAlignment(string $alignment): self
+    public function inline(bool $inline = true): self
     {
+        $this->inline = $inline;
+
+        return $this;
+    }
+
+    public function labelAlignment(LabelAlignments | string $alignment): self
+    {
+        if ($alignment instanceof LabelAlignments) {
+            $alignment = $alignment->value;
+        }
+
+        if (! in_array($alignment, LabelAlignments::availableValues())) {
+            throw new \InvalidArgumentException('Invalid label alignment provided.');
+        }
+
         $this->labelAlignment = $alignment;
 
         return $this;
@@ -78,5 +107,10 @@ class Checkbox extends Field
     public function getLabelAlignment(): string
     {
         return $this->labelAlignment;
+    }
+
+    public function getInline(): bool
+    {
+        return $this->inline;
     }
 }

@@ -1,24 +1,22 @@
 @php
     $statePath = $getStatePath();
     $size = $getSize();
+    $labelPosition = $getLabelPosition();
+    $labelAlignment = $getLabelAlignment();
 @endphp
 
 <x-dynamic-component
     :component="$getFieldWrapperView()"
     :field="$field"
-    :label="false"
+    :label="$getInline() ? false : $getLabel()"
 >
     <x-ts-checkbox
         :color="$getColor()"
         :position="$getLabelPosition()"
-        :xs="$size === 'xs' ? 'xs' : null"
-        :sm="$size === 'sm' ? 'sm' : null"
-        :md="$size === 'md' ? 'md' : null"
-        :lg="$size === 'lg' ? 'lg' : null"
-        :xl="$size === 'xl' ? 'xl' : null"
         :attributes="
                 $attributes
                     ->merge([
+                        $size => $size,
                         'autofocus' => $isAutofocused(),
                         'disabled' => $isDisabled(),
                         'id' => $getId(),
@@ -30,8 +28,17 @@
                     ->merge($getExtraInputAttributes(), escape: false)
             "
     >
-        <x-slot:label>
-            {{ $getLabel() }}
-        </x-slot:label>
+        @if($getInline())
+            <x-slot:label
+                :position="$labelPosition"
+                :attributes="
+                    $attributes
+                        ->merge([
+                            $labelAlignment => $labelAlignment
+                        ])"
+            >
+                {{ $getLabel() }}
+            </x-slot:label>
+        @endif
     </x-ts-checkbox>
 </x-dynamic-component>

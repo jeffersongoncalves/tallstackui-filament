@@ -120,7 +120,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Jèfferson Gonçalves](https://github.com/jeffersongoncalves)
+- [André Domingues](https://github.com/andrefelipe18)
 - [All Contributors](../../contributors)
 
 ## License

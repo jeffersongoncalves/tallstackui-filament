@@ -98,6 +98,10 @@ public function form(Form $form): Form
 
 🐞 If you spot a bug, please [submit a detailed issue.](https://github.com/andrefelipe18/tallstackui-filament/issues/new/choose)
 
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
 ## Contributing
 
 We welcome contributions of all kinds! If you'd like to improve this package, follow these steps:
@@ -106,4 +110,19 @@ We welcome contributions of all kinds! If you'd like to improve this package, fo
 2. Make your changes in a new branch.
 3. Submit a pull request with a clear description of your changes.
 
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+
 Thank you for helping improve TallStackUI Filament! 🚀
+
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
+## Credits
+
+- [Jèfferson Gonçalves](https://github.com/jeffersongoncalves)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

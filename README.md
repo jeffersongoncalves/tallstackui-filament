@@ -66,6 +66,27 @@ public function form(Form $form): Form
 ## Documentation
 
 - [Checkbox](./docs/Forms/Components/Checkbox.md)
+- [Color](./docs/Forms/Components/Color.md)
+- [Date](./docs/Forms/Components/Date.md)
+- [Input](./docs/Forms/Components/Input.md)
+- [Number](./docs/Forms/Components/Number.md)
+- [Password](./docs/Forms/Components/Password.md)
+- [Pin](./docs/Forms/Components/Pin.md)
+- [Range](./docs/Forms/Components/Range.md)
+- [Select](./docs/Forms/Components/Select.md)
+- [Tag](./docs/Forms/Components/Tag.md)
+- [Textarea](./docs/Forms/Components/Textarea.md)
+- [Time](./docs/Forms/Components/Time.md)
+- [Toggle](./docs/Forms/Components/Toggle.md)
+
+## TODO:
+
+- [ ] Write tests
+- [ ] Add Signature component
+- [ ] Add Radio component
+- [ ] Add File component
+- [ ] Add support a layout components (Step and Tabs)
+- [ ] Add rating component
 
 ## Need Help?
 

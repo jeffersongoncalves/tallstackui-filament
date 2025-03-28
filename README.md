@@ -16,7 +16,7 @@ This package allows you to use TallStackUI components within Filament forms, bri
 1. Install this package via Composer:
 
 ```bash
-composer require andrefelipe18/tallstackui-filament
+composer require andrefelipe18/tallstackuifilament
 ```
 
 2. Register the plugin for the Filament Panels you want to use:

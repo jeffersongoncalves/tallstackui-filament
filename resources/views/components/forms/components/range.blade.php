@@ -1,5 +1,6 @@
 @php
     $statePath = $getStatePath();
+    $size = $getSize();
 @endphp
 
 <x-dynamic-component
@@ -8,14 +9,13 @@
     :prefix-icon="false"
     :suffix-icon="false"
 >
-    <x-dynamic-component :component="TallStackUi::prefix('password')"
+    <x-dynamic-component :component="TallStackUi::prefix('range')"
         :invalidate="true"
-        :placeholder="$getPlaceholder()"
-        :rules="$getPasswordRules()"
-        :generator="$getGenerator()"
+        :color="$getColor()"
         :attributes="
                 $attributes
                     ->merge([
+                        $size => $size,
                         'autofocus' => $isAutofocused(),
                         'disabled' => $isDisabled(),
                         'id' => $getId(),

@@ -8,11 +8,11 @@
     :prefix-icon="false"
     :suffix-icon="false"
 >
-    <x-dynamic-component :component="TallStackUi::prefix('password')"
+    <x-dynamic-component :component="TallStackUi::prefix('tag')"
         :invalidate="true"
         :placeholder="$getPlaceholder()"
-        :rules="$getPasswordRules()"
-        :generator="$getGenerator()"
+        :limit="$getLimit()"
+        :prefix="$getPrefix()"
         :attributes="
                 $attributes
                     ->merge([

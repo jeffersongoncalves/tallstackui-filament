@@ -7,7 +7,6 @@
     :field="$field"
     :prefix-icon="false"
     :suffix-icon="false"
-    :password="false"
 >
     <x-dynamic-component :component="TallStackUi::prefix('pin')"
         :invalidate="true"

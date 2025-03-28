@@ -6,6 +6,11 @@
 
 </div>
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/andrefelipe18/tallstackuifilament.svg?style=flat-square)](https://packagist.org/packages/andrefelipe18/tallstackuifilament)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/andrefelipe18/tallstackuifilament/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/andrefelipe18/tallstackuifilament/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/andrefelipe18/tallstackuifilament.svg?style=flat-square)](https://packagist.org/packages/andrefelipe18/tallstackuifilament)
+
+
 ## Introduction
 
 [TallStackUI](https://tallstackui.com/) is a powerful suite of Blade components for TALL Stack apps. 

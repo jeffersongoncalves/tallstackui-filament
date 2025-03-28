@@ -2,7 +2,7 @@
 
 <div class="filament-hidden">
 
-![TallStackUI Filament](https://raw.githubusercontent.com/andrefelipe18/tallstackuifilament/main/art/andrefelipe18-tallstackuifilament.png)
+![TallStackUI Filament](https://raw.githubusercontent.com/andrefelipe18/tallstackui-filament/main/art/andrefelipe18-tallstackuifilament.png)
 
 </div>
 

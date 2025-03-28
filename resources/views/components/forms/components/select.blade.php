@@ -29,10 +29,10 @@
                 ->merge($getExtraInputAttributes(), escape: false)
         "
     >
-        @if(! empty($afterSlot))
+        @if (! empty($afterSlot))
             <x-slot:after>
                 {!! $afterSlot !!}
-            </x-slot:after>
+            </x-slot>
         @endif
     </x-dynamic-component>
 </x-dynamic-component>

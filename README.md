@@ -3,7 +3,6 @@
 ## Introduction
 
 [TallStackUI](https://tallstackui.com/) is a powerful suite of Blade components for TALL Stack apps. 
-[Filament](https://filamentphp.com/) is a popular admin panel builder for Laravel applications.
 
 This package allows you to use TallStackUI components within Filament forms, bringing together the best of both worlds.
 
@@ -87,6 +86,7 @@ public function form(Form $form): Form
 - [ ] Add File component
 - [ ] Add support a layout components (Step and Tabs)
 - [ ] Add rating component
+- [ ] Add support for relationship in Select component
 
 ## Need Help?
 

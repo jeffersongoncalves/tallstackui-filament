@@ -33,6 +33,7 @@ composer require andrefelipe18/tallstackuifilament
 
 ```php
 use TallStackUIFilament\TallStackUIPlugin;
+
 public function panel(Panel $panel): Panel
 {
     return $panel
@@ -44,10 +45,19 @@ public function panel(Panel $panel): Panel
 
 4. Run the following command:
 
+For NPM users
 ```bash
-npm run build && php artisan optimize:clear # For NPM users
+npm run build && php artisan optimize:clear
+```
 
-bun run build && php artisan optimize:clear # For Bun users
+For Bun users
+```bash
+bun run build && php artisan optimize:clear
+```
+
+For PNPM users
+```bash
+pnpm run build && php artisan optimize:clear
 ```
 
 ## Usage

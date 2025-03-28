@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace TallStackUIFilament\Concerns;
 
 use Closure;
-use TallStackUIFilament\Enums\LabelAlignments;
 use TallStackUIFilament\Enums\LabelPosition;
 
 trait HasLabelPosition

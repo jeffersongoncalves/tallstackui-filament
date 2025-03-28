@@ -47,7 +47,7 @@ class Input extends Field
     {
         if ($iconPosition instanceof IconPosition) {
             match ($iconPosition) {
-                IconPosition::After  => $iconPosition  = 'right',
+                IconPosition::After  => $iconPosition = 'right',
                 IconPosition::Before => $iconPosition = 'left',
             };
         }

@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace TallStackUIFilament\Enums;
 
 enum LabelPosition: string
 {
-    case LEFT = 'left';
+    case LEFT  = 'left';
     case RIGHT = 'right';
 
     public static function availableValues(): array

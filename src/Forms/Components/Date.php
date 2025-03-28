@@ -6,8 +6,8 @@ namespace TallStackUIFilament\Forms\Components;
 
 use Filament\Forms\Components\Concerns\HasExtraInputAttributes;
 use Filament\Forms\Components\Field;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use TallStackUIFilament\Concerns\HasPlaceholder;
 
 class Date extends Field
@@ -29,7 +29,7 @@ class Date extends Field
 
     protected ?int $maxYear = null;
 
-    protected Collection|array|null $disableDates = null;
+    protected Collection | array | null $disableDates = null;
 
     protected bool $range = false;
 
@@ -51,7 +51,7 @@ class Date extends Field
         return $this;
     }
 
-    public function minDate(Carbon |string $minDate): self
+    public function minDate(Carbon | string $minDate): self
     {
         $this->minDate = $minDate;
 
@@ -79,7 +79,7 @@ class Date extends Field
         return $this;
     }
 
-    public function disableDates(Collection|array $dates): self
+    public function disableDates(Collection | array $dates): self
     {
         $this->disableDates = $dates;
 
@@ -137,7 +137,7 @@ class Date extends Field
         return $this->maxYear;
     }
 
-    public function getDisableDates(): Collection|array|null
+    public function getDisableDates(): Collection | array | null
     {
         return $this->disableDates;
     }

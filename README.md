@@ -1,5 +1,11 @@
 # TallStackUI Filament
 
+<div class="filament-hidden">
+
+![TallStackUI Filament](https://raw.githubusercontent.com/andrefelipe18/tallstackuifilament/main/art/andrefelipe18-tallstackuifilament.png)
+
+</div>
+
 ## Introduction
 
 [TallStackUI](https://tallstackui.com/) is a powerful suite of Blade components for TALL Stack apps. 

@@ -1,84 +1,82 @@
-# TallStackUI filament integration
+# TallStackUI Filament
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/andrefelipe18/tallstackuifilament.svg?style=flat-square)](https://packagist.org/packages/andrefelipe18/tallstackuifilament)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/andrefelipe18/tallstackuifilament/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/andrefelipe18/tallstackuifilament/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/andrefelipe18/tallstackuifilament/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/andrefelipe18/tallstackuifilament/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/andrefelipe18/tallstackuifilament.svg?style=flat-square)](https://packagist.org/packages/andrefelipe18/tallstackuifilament)
+## Introduction
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+[TallStackUI](https://tallstackui.com/) is a powerful suite of Blade components for TALL Stack apps. 
+[Filament](https://filamentphp.com/) is a popular admin panel builder for Laravel applications.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/TallStackUIFilament.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/TallStackUIFilament)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This package allows you to use TallStackUI components within Filament forms, bringing together the best of both worlds.
 
 ## Installation
 
-You can install the package via composer:
+1. Install [TallStackUI](https://tallstackui.com/docs/v2/installation)
+
+> Don't worry about the Blade directives for styles and scripts inside the panel; we add them automatically for you.
+
+1. Install this package via Composer:
 
 ```bash
-composer require andrefelipe18/tallstackuifilament
+composer require andrefelipe18/tallstackui-filament
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="tallstackuifilament-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="tallstackuifilament-config"
-```
-
-This is the contents of the published config file:
+2. Register the plugin for the Filament Panels you want to use:
 
 ```php
-return [
-];
+use TallStackUIFilament\TallStackUIPlugin;
+public function panel(Panel $panel): Panel
+{
+    return $panel
+        ->plugins([
+            TallStackUIPlugin::make()
+        ]);
+}
 ```
 
-Optionally, you can publish the views using
+3. Run the following command:
 
 ```bash
-php artisan vendor:publish --tag="tallstackuifilament-views"
+npm run build && php artisan optimize:clear # For NPM users
+
+bun run build && php artisan optimize:clear # For Bun users
 ```
 
 ## Usage
 
+You can now use TallStackUI components in your Filament forms. For example:
+
 ```php
-$tallStackUIFilament = new TallStackUIFilament();
-echo $tallStackUIFilament->echoPhrase('Hello, TallStackUIFilament!');
+use TallStackUIFilament\Forms\Components\Pin;
+
+public function form(Form $form): Form
+{
+    return $form
+        ->schema([
+            Pin::make('pin_tallstack')
+                ->label('Pin TallStackUI')
+                ->helperText('Helper Text')
+                ->hint('Hint Text')
+                ->length(4)
+                ->prefix('PIN')
+                ->letters()
+                ->required(),
+        ]);
+}
 ```
 
-## Testing
+## Documentation
 
-```bash
-composer test
-```
+- [Checkbox](./docs/Forms/Components/Checkbox.md)
 
-## Changelog
+## Need Help?
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+🐞 If you spot a bug, please [submit a detailed issue.](https://github.com/andrefelipe18/tallstackui-filament/issues/new/choose)
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+We welcome contributions of all kinds! If you'd like to improve this package, follow these steps:
 
-## Security Vulnerabilities
+1. Fork the repository.
+2. Make your changes in a new branch.
+3. Submit a pull request with a clear description of your changes.
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [André Domingues](https://github.com/andrefelipe18)
-- [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Thank you for helping improve TallStackUI Filament! 🚀

@@ -13,13 +13,13 @@ This package allows you to use TallStackUI components within Filament forms, bri
 
 > Don't worry about the Blade directives for styles and scripts inside the panel; we add them automatically for you.
 
-1. Install this package via Composer:
+2. Install this package via Composer:
 
 ```bash
 composer require andrefelipe18/tallstackuifilament
 ```
 
-2. Register the plugin for the Filament Panels you want to use:
+3. Register the plugin for the Filament Panels you want to use:
 
 ```php
 use TallStackUIFilament\TallStackUIPlugin;
@@ -32,7 +32,7 @@ public function panel(Panel $panel): Panel
 }
 ```
 
-3. Run the following command:
+4. Run the following command:
 
 ```bash
 npm run build && php artisan optimize:clear # For NPM users
